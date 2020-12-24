@@ -31,3 +31,20 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+//SMOOTH SCROLL
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  //OLD style to do to get the coordinate to scroll to
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords); //you will get the coordinate
+  console.log(e.target.getBoundingClientRect());
+
+  //scrolling
+  window.scrollTo(s1coords.top, s1coords.top);
+});

@@ -68,3 +68,14 @@ header.prepend(message.cloneNode(true)); //it will create a copy of message at t
 //BEFORE AND AFTER
 header.before(message); //put the message before the header element as a siblings
 header.after(message); //put the message after the header element as a siblings
+
+//DeLETING ELEMENT
+document
+  .querySelector('.btn--close-cookie')
+  .addEventListener('click', function () {
+    console.log('Button is clicked');
+    // message.remove();
+    message.parentElement.removeChild(message);
+  });
+message.style.backgroundColor = '#37383d';
+message.style.width = '120%';
